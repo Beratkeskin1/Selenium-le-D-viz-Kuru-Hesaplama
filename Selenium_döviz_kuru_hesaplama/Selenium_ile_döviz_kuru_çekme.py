@@ -28,7 +28,7 @@ class Döviz_incele_class():
             self.tk_label_data.destroy()
             self.tk_restart_button.destroy()
         driver.get("https://uzmanpara.milliyet.com.tr/doviz-kurlari/")
-        bekle = WebDriverWait(driver, 20).until(
+        bekle = WebDriverWait(driver, 10).until(
             expected_conditions.presence_of_element_located((By.XPATH, "/html/body/div[13]/div[5]/ul"))
         ).text
         dizi_data = bekle.splitlines()
